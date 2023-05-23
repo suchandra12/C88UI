@@ -8,13 +8,20 @@ import { WalltedialogComponent } from '../walltedialog/walltedialog.component';
   styleUrls: ['./add-wallte-dialog.component.scss']
 })
 export class AddWallteDialogComponent {
+  public searchTerm: string = '';
 
-  public  searchTerm:any = '';
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(WalltedialogComponent);
-   // alert()
+    // alert()
   }
 
+  matchesSearchTerm(buttonLabel: string): boolean {
+    if (this.searchTerm.trim() === '') {
+      return true;
+    } else {
+      return buttonLabel.toLowerCase().includes(this.searchTerm.toLowerCase());
+    }
+  }
 }
