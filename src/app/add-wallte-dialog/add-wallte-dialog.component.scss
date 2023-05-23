@@ -1,0 +1,18 @@
+::ng-deep .mat-form-field-flex{
+    margin-top: 2rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    height: 60px;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
+    height: 0px !important;
+  }
+  
+  ::ng-deep .mat-form-field-prefix, .mat-form-field-suffix {
+    margin: auto;
+  }
+  
+//   input::placeholder {
+//     font: 2rem/3 sans-serif;
+//   }

@@ -1,0 +1,41 @@
+<div class="dialog" style="width: 720px;">
+    <div style="display: flex; justify-content: space-between;">
+      <h1 mat-dialog-title style="margin-bottom: 46px;margin-right: auto;">Add wallet</h1>
+      <button mat-button mat-dialog-close style="margin-bottom: 41px;"><mat-icon>close</mat-icon></button>
+    </div>
+  
+  <mat-divider></mat-divider>
+  <hr>
+  <div>
+    <mat-form-field style="width: 100%;">
+      <input matInput [(ngModel)]="searchTerm"
+        placeholder="search for your integration or paste your public address,HD wallet key or ENS " />
+      <mat-icon matPrefix  style="padding: 17px">search</mat-icon>
+    </mat-form-field>
+  </div>
+  
+  <mat-dialog-content class="mat-typography ">
+    <mat-grid-list cols="3" gutterSize="20px" rowHeight="100px">
+      <mat-grid-tile>
+        <button mat-button (click)="openDialog()">BitCoin</button>
+      </mat-grid-tile>
+      <mat-grid-tile> 
+        <button mat-button (click)="openDialog()">Etherem</button>
+      </mat-grid-tile>
+      <mat-grid-tile> 
+        <button mat-button (click)="openDialog()">Metamask</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="3" gutterSize="20px" rowHeight="50px">
+      <mat-grid-tile>
+        <button mat-button (click)="openDialog()">coinbase</button>
+      </mat-grid-tile>
+      <mat-grid-tile> 
+        <button mat-button (click)="openDialog()">Binace Us</button>
+      </mat-grid-tile>
+      <mat-grid-tile> 
+        <button mat-button (click)="openDialog()">Kraken</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-dialog-content>
+  </div>
